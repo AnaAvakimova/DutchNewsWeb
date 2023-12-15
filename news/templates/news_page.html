@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+news
+{% endblock %}
+{% block content %}
+<body>
+<div class="main">
+        <h2 class="article-title">{{ article.title }}</h2>
+        <br>
+        <figure>
+            <img src="{{ article.image.url }}" alt="" width="500" height="500">
+        </figure>
+        <a target="_blank" href="/news/"></a>
+</div>
+
+</body>
+{% endblock %}

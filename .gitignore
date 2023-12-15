@@ -1,0 +1,11 @@
+.idea
+db.sqlite3
+main.py
+/api
+/static
+/media
+venv
+*.pyc
+*~
+__pycache__
+
