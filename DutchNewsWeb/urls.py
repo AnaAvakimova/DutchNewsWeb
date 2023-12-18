@@ -22,8 +22,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('news.urls')),
-    path('api/', include('api.urls'))
+    path('', include('news.urls'))
 ]
 
 # This is the part to add for serving media files

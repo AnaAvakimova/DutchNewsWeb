@@ -35,3 +35,11 @@ def get_article(request, num):
     for article in articles:
         if article.id == num:
             return render(request, 'news_page.html', {'article': article})
+
+
+def get_disclaimer(request):
+    return render(request, 'disclaimer.html')
+
+
+def get_main(request):
+    return render(request, 'main.html')

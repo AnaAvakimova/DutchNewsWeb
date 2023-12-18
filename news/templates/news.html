@@ -7,7 +7,7 @@ news
 
 <body>
 <header class="header">
-    <h1>Dutch News</h1>
+    <h1>AI News</h1>
 </header>
 
 <main class="main columns">
@@ -15,7 +15,7 @@ news
         {% for article in first_articles %}
         <div class="article first-article" href="#">
             <figure class="article-image is-4by3">
-                <img src="{{ article.image.url }}" alt="">
+                <a href="/{{ article.id }}/"><img src="{{ article.image.url }}" alt=""></a>
             </figure>
             <div class="article-body">
                 <h2 class="article-title">
@@ -37,7 +37,7 @@ news
                 {% for article in second_articles %}
                 <div class="article" href="#">
                     <figure class="article-image is-16by9">
-                        <img src="{{ article.image.url }}" alt="">
+                        <a href="/{{ article.id }}/"> <img src="{{ article.image.url }}" alt=""></a>
                     </figure>
                     <div class="article-body">
                         <h2 class="article-title">
@@ -59,7 +59,7 @@ news
                 {% for article in third_articles %}
                 <div class="article" href="#">
                     <figure class="article-image is-16by9">
-                        <img src="{{ article.image.url }}" alt="">
+                        <a href="/{{ article.id }}/"><img src="{{ article.image.url }}" alt=""></a>
                     </figure>
                     <div class="article-body">
                         <h2 class="article-title">
@@ -84,7 +84,7 @@ news
         {% for article in forth_articles %}
         <div class="article" href="#">
             <figure class="article-image is-3by2">
-                <img src="{{ article.image.url }}" alt="">
+                <a href="/{{ article.id }}/"> <img src="{{ article.image.url }}" alt=""></a>
             </figure>
             <div class="article-body">
                 <h2 class="article-title">
@@ -104,7 +104,7 @@ news
         {% for article in fifth_articles %}
         <div class="article" href="#">
             <figure class="article-image is-3by2">
-                <img src="{{ article.image.url }}" alt="">
+                <a href="/{{ article.id }}/"><img src="{{ article.image.url }}" alt=""></a>
             </figure>
             <div class="article-body">
                 <h2 class="article-title">

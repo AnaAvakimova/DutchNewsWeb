@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+@import url(https://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Droid+Sans);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
 
 html {
@@ -14,7 +14,7 @@ html {
 
 body {
   color: #666;
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Inconsolata", serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
@@ -78,6 +78,14 @@ div, h2, p, figure {
   flex-direction: column;
   flex-basis: auto;
   margin: 10px;
+
+}
+
+.disclaimer {
+  color: white;
+  background: #483D8B;
+  padding: 10px 0 20px;
+  text-align: center;
 
 }
 

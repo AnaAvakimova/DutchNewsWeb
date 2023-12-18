@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+</head>
+<body>
+<div class="container">
+    <div class="background"></div>
+    <nav>
+        <img src="media/news_images/logo2.png" class="logo-img">
+        <ul>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Disclaimer</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>AI<span>News</span></h1>
+        <p>Explore our AI-generated news. Our platform uses the power of artificial intelligence to generate news
+            articles and create stunning, relevant images that accompany the stories.</p>
+
+    </div>
+    <div class="btn">
+        <button type="button">Learn More</button>
+    </div>
+</div>
+
+</body>
+</html>

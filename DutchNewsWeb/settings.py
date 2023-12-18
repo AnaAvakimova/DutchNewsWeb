@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-^*2+ldie!lyztus5esks3jb_0x((pfran-6z01q^00x_4341gn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -36,8 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'news.apps.NewsConfig',
-    'api.apps.ApiConfig',
-    'tastypie'
 ]
 
 MIDDLEWARE = [
@@ -103,7 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'CET'
 
 USE_I18N = True
 
