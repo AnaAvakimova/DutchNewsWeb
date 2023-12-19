@@ -1,129 +1,43 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block title %}
-news
-{% endblock %}
-{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+
+</head>
 
 <body>
 <header class="header">
+    <a href="/"><img src="../../media/news_images/logo2.png" class="logo-img"></a>
     <h1>AI News</h1>
 </header>
 
-<main class="main columns">
-    <section class="column main-column">
-        {% for article in first_articles %}
-        <div class="article first-article" href="#">
-            <figure class="article-image is-4by3">
-                <a href="/{{ article.id }}/"><img src="{{ article.image.url }}" alt=""></a>
-            </figure>
-            <div class="article-body">
-                <h2 class="article-title">
-                    <a href="/{{ article.id }}/">{{ article.title }}</a>
-                </h2>
-                <p class="article-content">
-                    {{ article.text }}
-                </p>
-                <footer class="article-info">
-                    <span>{{ article.created_at }}</span>
-                </footer>
-            </div>
+
+<main class="articles-container">
+    {% for article in articles %}
+    <div class="article" href="#">
+        <figure class="article-image">
+            <a href="/news/{{ article.id }}/"> <img src="{{ article.image.url }}" alt=""></a>
+        </figure>
+        <div class="article-body">
+            <h2 class="article-title">
+                <a href="/news/{{ article.id }}/">{{ article.title }}</a>
+            </h2>
+            <p class="article-content">
+                {{ article.text }}
+            </p>
+            <footer class="article-info">
+                <span>{{ article.created_at }}</span>
+            </footer>
         </div>
-        {% endfor %}
-
-
-        <div class="columns">
-            <div class="column">
-                {% for article in second_articles %}
-                <div class="article" href="#">
-                    <figure class="article-image is-16by9">
-                        <a href="/{{ article.id }}/"> <img src="{{ article.image.url }}" alt=""></a>
-                    </figure>
-                    <div class="article-body">
-                        <h2 class="article-title">
-                            <a href="/{{ article.id }}/">{{ article.title }}</a>
-                        </h2>
-                        <p class="article-content">
-                            {{ article.text }}
-                        </p>
-                        <footer class="article-info">
-                            <span>{{ article.created_at }}</span>
-
-                        </footer>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-
-            <div class="column">
-                {% for article in third_articles %}
-                <div class="article" href="#">
-                    <figure class="article-image is-16by9">
-                        <a href="/{{ article.id }}/"><img src="{{ article.image.url }}" alt=""></a>
-                    </figure>
-                    <div class="article-body">
-                        <h2 class="article-title">
-                            <a href="/{{ article.id }}/">{{ article.title }}</a>
-                        </h2>
-                        <p class="article-content">
-                            {{ article.text }}
-                        </p>
-                        <footer class="article-info">
-                            <span>{{ article.created_at }}</span>
-
-                        </footer>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-
-    </section>
-
-    <section class="column">
-        {% for article in forth_articles %}
-        <div class="article" href="#">
-            <figure class="article-image is-3by2">
-                <a href="/{{ article.id }}/"> <img src="{{ article.image.url }}" alt=""></a>
-            </figure>
-            <div class="article-body">
-                <h2 class="article-title">
-                    <a href="/{{ article.id }}/">{{ article.title }}</a>
-                </h2>
-                <p class="article-content">
-                    {{ article.text }}
-                </p>
-                <footer class="article-info">
-                    <span>{{ article.created_at }}</span>
-
-
-                </footer>
-            </div>
-        </div>
-        {% endfor %}
-        {% for article in fifth_articles %}
-        <div class="article" href="#">
-            <figure class="article-image is-3by2">
-                <a href="/{{ article.id }}/"><img src="{{ article.image.url }}" alt=""></a>
-            </figure>
-            <div class="article-body">
-                <h2 class="article-title">
-                    <a href="/{{ article.id }}/">{{ article.title }}</a>
-                </h2>
-                <p class="article-content">
-                    {{ article.text }}
-                </p>
-                <footer class="article-info">
-                    <span>{{ article.created_at }}</span>
-
-                </footer>
-            </div>
-        </div>
-
-        {% endfor %}
-    </section>
+    </div>
+    {% endfor %}
 </main>
-
-
 </body>
-{% endblock %}
+</html>

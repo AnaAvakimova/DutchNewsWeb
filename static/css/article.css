@@ -1,0 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Droid+Sans);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+
+html {
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 14px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+}
