@@ -16,6 +16,7 @@ translator = deepl.Translator(deepl_api_key)
 URL = requests.get(web)
 
 
+
 class Article:
     def __init__(self, url):
         self.content = ''
