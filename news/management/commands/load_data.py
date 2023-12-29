@@ -20,4 +20,4 @@ class Command(BaseCommand):
                     article_object.image_url = article.image
                     article_object.save()
 
-                print('All articles updated')
+        print('All articles updated')

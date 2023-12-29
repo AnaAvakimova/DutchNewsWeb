@@ -11,6 +11,9 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'DutchNewsWeb.settings')
+if os.path.isfile(os.path.join(os.path.dirname(__file__), 'local_settings.py')):
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "local_settings")
+else:
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "DutchNewsWeb.settings.production")
 
 application = get_wsgi_application()

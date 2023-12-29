@@ -1,11 +1,8 @@
 .idea
-db.sqlite3
+db/db.sqlite3
 main.py
-/api
-/media
 venv
 *.pyc
 *~
 __pycache__
-
-/dutchnewsweb.tar
+docker-compose.yml
