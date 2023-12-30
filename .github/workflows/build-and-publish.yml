@@ -1,4 +1,4 @@
-name: Build and publish a Docker image
+name: Create and publish a Docker image
 
 on:
   push:
@@ -27,6 +27,14 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Extract tag name
+        id: extract_tag
+        run: echo ::set-output name=tag::${GITHUB_REF#refs/tags/}
+
+      - name: Extract major version
+        id: major_version
+        run: echo ::set-output name=major::$(echo ${{ steps.extract_tag.outputs.tag }} | cut -d. -f1)
+
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v5
@@ -34,6 +42,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=ref,event=tag
+            type=raw,value=${{ steps.major_version.outputs.major }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
