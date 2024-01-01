@@ -3,20 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>
-        {% block title %}
-        {% endblock %}
-    </title>
+    <title>SketchNews</title>
+    <link rel="icon" type="image/x-icon" href="../../media/news_images/favicon.ico">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
 
 </head>
 <body>
-<div class="container article">
-        <h2>{{ article.title }}</h2>
+
+<header class="header">
+    <a href="/"><img src="../../media/news_images/logo2.jpg" class="logo-img"></a>
+    <h1>Sketch News</h1>
+</header>
+
+
+<div class="full-article">
+
         <br>
         <figure>
-            <img src="{{ article.image.url }}" alt="" width="500" height="500">
+            <img src="{{ article.image.url }}" alt="" >
         </figure>
         <a target="_blank" href="/news/"></a>
 </div>
