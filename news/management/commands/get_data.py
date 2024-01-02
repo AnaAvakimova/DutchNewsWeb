@@ -4,7 +4,6 @@ import os
 from openai import OpenAI
 import deepl
 
-
 # initialization of environmental variables
 web = os.environ.get('NEWS_WEB')
 client = OpenAI(
@@ -14,7 +13,6 @@ client = OpenAI(
 deepl_api_key = os.environ.get('DEEPL_API_KEY')
 translator = deepl.Translator(deepl_api_key)
 URL = requests.get(web)
-
 
 
 class Article:
@@ -136,7 +134,3 @@ def get_articles():
     get_image(articles)
 
     return articles
-
-
-
-
