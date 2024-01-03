@@ -9,8 +9,6 @@ html {
   left: 0;
   width: 100%;
   font-size: 14px;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   min-width: 300px;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -31,7 +29,7 @@ a {
   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
-div, h2, p, figure {
+h2, p, figure {
   margin: 0;
   padding: 0;
 }
@@ -46,19 +44,6 @@ div, h2, p, figure {
 .header h1 {
   font-size: 40px;
   font-weight: bold;
-
-}
-
-.header h2 a {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  color: white;
-  font-size: 20px;
-  opacity: 0.5;
-}
-
-.header h2 a:hover {
-  border-bottom-color: white;
-  opacity: 1;
 }
 
 .full-article {
@@ -73,8 +58,6 @@ div, h2, p, figure {
     flex-wrap: wrap;
     margin: 0 -15px; /* Adjusts for the negative margins on the articles */
 }
-
-
 
 .article {
     background-color: #f4f4f4;
@@ -108,7 +91,6 @@ div, h2, p, figure {
   flex: 1;
   flex-direction: column;
   padding: 20px;
-
 }
 
 .article-title {
@@ -122,7 +104,6 @@ div, h2, p, figure {
 .article-content {
   flex: 1;
   margin-top: 5px;
-
 }
 
 .article-info {
@@ -132,24 +113,10 @@ div, h2, p, figure {
   margin-top: 10px;
 }
 
-/* Responsive adjustments (optional) */
-@media screen and (max-width: 600px) {
-    .article {
-        flex-basis: calc(50% - 30px);
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .article {
-        flex-basis: 100%;
-    }
-}
-
 .disclaimer {
   color: #fff;
   padding: 10px 0 20px;
   text-align: left;
-
 }
 
 .logo-img {
@@ -158,21 +125,63 @@ div, h2, p, figure {
     cursor: pointer;
     position:absolute;
     left:150px;
-
 }
-
 
 .pagination  {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 40px;
-    font-size: 20px;
-    color: #fff;
     margin-left: auto;
     margin-right: auto;
-
+    font-size: 20px;
+    color: #fff;
 }
 
 .step-links {
      color: #fff;
 }
+
+@media only screen and (max-width: 800px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .full-article {
+        width: 100%;
+        padding: 15px 5%;
+        box-sizing: border-box;
+    }
+    .full-article img {
+        max-width: 100%;
+        height: auto;
+}
+
+    .articles-container {
+        flex-direction: column;
+    }
+
+    .article {
+        flex-basis: auto;
+    }
+
+    .article-body {
+        padding: 10px;
+    }
+
+    .article-title {
+        font-size: 1.2em;
+
+    }
+    .logo-img {
+        left: 10px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+
