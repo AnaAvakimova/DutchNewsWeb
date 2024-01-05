@@ -5,13 +5,6 @@ from django.http import JsonResponse
 
 
 def get_news(request):
-    # articles = News.objects.all()
-    # articles = list(reversed(articles))
-    # context = {
-    #     'articles': articles
-    # }
-    # return render(request, 'news.html', context)
-
     articles = News.objects.all().order_by('-created_at')
     paginator = Paginator(articles, 6)
     page_number = request.GET.get("page")

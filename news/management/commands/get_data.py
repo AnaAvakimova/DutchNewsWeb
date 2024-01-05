@@ -66,7 +66,6 @@ def get_content(articles):
         print('Content is loaded')
 
 
-# sending content of articles to ChatGPT which summarize them
 def summarize_articles(articles):
     for article in articles:
         response = client.completions.create(
