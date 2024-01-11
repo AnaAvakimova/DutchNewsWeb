@@ -57,6 +57,7 @@ h2, p, figure {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px; /* Adjusts for the negative margins on the articles */
+
 }
 
 .article {
@@ -66,6 +67,8 @@ h2, p, figure {
     flex-basis: calc(30% - 30px); /* Subtract margin */
     margin: 15px;
     padding: 20px;
+
+
 }
 
 .article-image {
@@ -135,10 +138,29 @@ h2, p, figure {
     margin-right: auto;
     font-size: 20px;
     color: #fff;
+
+
 }
 
-.step-links {
-     color: #fff;
+.pagination a, .pagination .current {
+    display: inline-block;
+    margin: 0 2px;
+    padding: 5px 10px;
+    border: 1px solid #ddd; /* Light grey border */
+    background-color: white;
+    color: black; /* Text color */
+    text-decoration: none;
+}
+
+.pagination .current {
+    border-color: black; /* Darker border for the current page */
+    font-weight: bold;
+}
+
+.pagination .ellipsis {
+    display: inline-block;
+    margin: 0 2px;
+    padding: 5px 10px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -166,6 +188,7 @@ h2, p, figure {
 
     .article {
         flex-basis: auto;
+
     }
 
     .article-body {
