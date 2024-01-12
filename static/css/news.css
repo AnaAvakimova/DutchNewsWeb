@@ -155,6 +155,7 @@ h2, p, figure {
 .pagination .current {
     border-color: black; /* Darker border for the current page */
     font-weight: bold;
+    background-color: #C0C0C0;
 }
 
 .pagination .ellipsis {

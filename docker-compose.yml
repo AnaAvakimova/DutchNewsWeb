@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - db_volume:/app/db
+            - static_volume:/volumetmp
+            - media_volume:/app/media
+        env_file:
+          - .env
+        ports:
+            - 8000:8000
+        command: ["/bin/sh", "-c", "rm -rf /volumetmp/* && cp -r /app/static/* /volumetmp/ && gunicorn DutchNewsWeb.wsgi:application --bind 0.0.0.0:8000"]
+
+
+    nginx:
+        image: nginx:1.19.0-alpine
+        ports:
+          - "80:80"
+        volumes:
+          - ./nginx:/etc/nginx/conf.d
+          - static_volume:/app/static
+          - media_volume:/app/media
+        depends_on:
+            - web
+        command: nginx -g 'daemon off;'
+volumes:
+     static_volume:
+     media_volume:
+     db_volume:
