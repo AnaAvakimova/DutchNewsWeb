@@ -2,7 +2,9 @@ from django.core.management.base import BaseCommand
 from annoying.functions import get_object_or_None
 from news.models import News
 from .get_data import get_articles
+from dotenv import load_dotenv, find_dotenv
 
+load_dotenv(find_dotenv())
 
 class Command(BaseCommand):
     help = 'Add articles (title, content, link, image) from dutch websites'

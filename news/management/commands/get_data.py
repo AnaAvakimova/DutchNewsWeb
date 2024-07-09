@@ -3,6 +3,9 @@ from bs4 import BeautifulSoup
 import os
 from openai import OpenAI
 import deepl
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())
 
 # initialization of environmental variables
 web = os.environ.get('NEWS_WEB')

@@ -10,6 +10,7 @@ services:
             - media_volume:/app/media
         env_file:
           - .env
+        restart: always
         ports:
             - 8000:8000
         command: ["/bin/sh", "-c", "rm -rf /volumetmp/* && cp -r /app/static/* /volumetmp/ && gunicorn DutchNewsWeb.wsgi:application --bind 0.0.0.0:8000"]
@@ -19,6 +20,7 @@ services:
         image: nginx:1.19.0-alpine
         ports:
           - "80:80"
+        restart: always
         volumes:
           - ./nginx:/etc/nginx/conf.d
           - static_volume:/app/static
