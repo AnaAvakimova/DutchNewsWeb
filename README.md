@@ -16,3 +16,7 @@ It uses:
 - This website works autonomously, the script for loading news runs every day by the cron command.
 - The website is developed based on the Django framework, using SQLite3 database.
 - Each component is dockerized and hosted on my personal Linux-based VPS, behind Nginx and Cloudflare.
+
+## How to run locally with development settings
+
+`python manage.py runserver --settings=DutchNewsWeb.settings.development`
