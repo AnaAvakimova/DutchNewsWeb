@@ -31,3 +31,4 @@ To run application locally you need to include the following environment paramet
 
 `python manage.py runserver --settings=DutchNewsWeb.settings.development`
 
+
