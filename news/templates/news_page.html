@@ -14,16 +14,33 @@
 <header class="header">
     <a href="/"><img src="../../static/images/logo2.jpg" class="logo-img"></a>
     <h1>Sketch News</h1>
+    <nav>
+        <ul>
+        <li><a href="/disclaimer">Disclaimer</a></li>
+    </ul>
+    </nav>
 </header>
-
-<div class="full-article">
-
+<main>
+<div class="article-container">
+    <div class="image-container">
         <br>
         <figure>
             <img src="{{ article.image.url }}" alt="" >
         </figure>
         <a target="_blank" href="/news/"></a>
-</div>
+    </div>
+    <div class="text-container">
+            <h2 class="article-title-selected">
+               {{ article.title }}
+            </h2>
+        <br>
+            <p class="article-content-selected">
+                {{ article.text }}
+            </p>
+     </div>
+<div>
 
+</div>
+</main>
 </body>
 </html>
