@@ -17,6 +17,16 @@ It uses:
 - The website is developed based on the Django framework, using SQLite3 database.
 - Each component is dockerized and hosted on my personal Linux-based VPS, behind Nginx and Cloudflare.
 
+# Environment variables
+To run application locally you need to include the following environment parameters to .env file, which is saved in the main directory:
+
+| Name            | Default      | Description                                                                                              |
+|-----------------|--------------|----------------------------------------------------------------------------------------------------------|
+| DEEPL_API_KEY     | \<required\> | API key to run Deepl                                                                                     |
+| NEWS_WEB      | \<required\> | Website for news scrapping                                                                               |
+| OPENAI_API_KEY | \<required\> | API key to run OpenAI                                                                           
+
+
 ## How to run locally with development settings
 
 `python manage.py runserver --settings=DutchNewsWeb.settings.development`
